@@ -75,13 +75,9 @@ namespace seneca
 	}
 
 	//Move constructor
-	//ProteinDatabase::ProteinDatabase(ProteinDatabase&& source) 
-	//{
-	//	*this = move(source);
-	//}
-	ProteinDatabase::ProteinDatabase(ProteinDatabase&& source): m_protein(source.m_protein), m_numStored(source.m_numStored) {
-		source.m_protein = nullptr;
-		source.m_numStored = 0;
+	ProteinDatabase::ProteinDatabase(ProteinDatabase&& source) 
+	{
+		*this = move(source);
 	}
 
 	//Move assignment operator

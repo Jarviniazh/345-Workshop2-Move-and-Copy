@@ -5,7 +5,7 @@ namespace seneca
 {
 	class ProteinDatabase
 	{
-		std::string* m_protein;
+		std::string* m_protein{};
 		size_t m_numStored {};
 	public:
 		ProteinDatabase() : m_protein{} {};
