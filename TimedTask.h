@@ -19,17 +19,18 @@ namespace seneca
 		std::chrono::steady_clock::time_point m_start {};
 		std::chrono::steady_clock::time_point m_end {};
 
-
 	public:
 		TimedTask(){};
+		// a modifier that starts the timer for an event
 		void startClock();
+		//a modifier that stops the timer for an event
 		void stopClock();
+		//a modifier that receives the address of a C-style null-terminated string that holds the name of the task.
 		void addTask(const char*);
-
+		//a friend insertion operator that receives a reference to an std::ostream object and a TimedTaskobject.
 		friend std::ostream& operator<<(std::ostream&, const TimedTask&);
 	};
 
-	
 }
 
 
