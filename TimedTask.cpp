@@ -23,17 +23,6 @@ namespace seneca
 		m_numRecords++;
 	}
 
-	int TimedTask::getNumRecords() const
-	{
-		return m_numRecords;
-	}
-
-	Task TimedTask::getTask(int i) const
-	{
-		return m_task[i];
-	}
-
-;
 	ostream& operator<<(ostream& os, const TimedTask& task)
 	{
 		os << "--------------------------" << endl;

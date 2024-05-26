@@ -26,12 +26,10 @@ namespace seneca
 		void stopClock();
 		void addTask(const char*);
 
-		int getNumRecords() const;
-		Task getTask(int) const;
-		
+		friend std::ostream& operator<<(std::ostream&, const TimedTask&);
 	};
 
-	std::ostream& operator<<(std::ostream&, const TimedTask&);
+	
 }
 
 
